@@ -1,0 +1,71 @@
+#include<stdio.h>
+int main(){
+    char a;  
+    int b,c,d,i=1,sum=0,e,f,g,h,j,k;
+    printf("A: Sum of an arithmetic series [receive first term, number of terms, and the difference between two consecutive terms]\nG: Sum of a geometric series [receive first term, number of terms,and the ratio between two consecutive terms].\nL: Compute LCM of two numbers\nH: Compute HCF of two numbers\nF: Display all factors of a number\nT: Print a triangle [receive number of rows] \nD: Print a triangle [receive the number in the center, for instance, 5 in the figure shown below] \nE: exit\n");
+    scanf("%c",&a);
+    if(a=='A'||a=='a')
+        {
+            printf("enter 1st term\n");
+            scanf("%d",&b);
+            printf("enter number of terms\n");
+            scanf("%d",&c);
+            printf("enter common difference\n");
+            scanf("%d",&d);
+            while(i<=c)
+                        {
+                        i++;
+                        //***very-very impotant to first compute sum then change the value of b bcs answer will come different ofcourse 
+                        sum=sum+b;
+                        b=b+d;
+                        }
+                        printf("sum=%d",sum);
+        }
+    
+    if(a=='G'||a=='g')
+        {
+            printf("enter 1st term\n");
+            scanf("%d",&e);
+            printf("enter number of terms\n");
+            scanf("%d",&f);
+            printf("enter common ratio\n");
+            scanf("%d",&g);
+            while(i<=f)
+                {
+                    i++;
+                    sum=sum+e;
+                    e=e*g;
+                    
+                }
+                printf("sum=%d",sum);
+            
+            
+        }
+    if(a=='H'||a=='h')
+        {
+            printf("enter 1st number\n");
+            scanf("%d",&h);
+            printf("enter 2nd number\n");
+            scanf("%d",&j);
+            //this method is very sophisticated bcs knowing what chnages before what also which statement to write first so prefer using the other method  
+           if(h>j)
+           { k=h%j;
+               for(;k!=0;){h=j;j=k;k=h%j;}
+               printf("hcf =%d",j);
+           }
+           if(h<j)
+           { k=j%h;
+               for(;k!=0;){j=h;h=k;k=j%h;}
+               printf("hcf =%d",h);
+           }
+        }
+    if(a=='L'||a=='l')
+    if(a=='F'||a=='f')
+    if(a=='T'||a=='t')
+    if(a=='D'||a=='d')
+    if(a=='E'||a=='e'){return 0;}
+    
+    
+    
+    return 0;
+}
