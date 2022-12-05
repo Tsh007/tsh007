@@ -1,0 +1,44 @@
+#include <stdio.h>
+void basic_arithmetic(int b,int c,int*sum,int*dif,int*pro,int*quotient,int*rem,float*float_div){
+    *sum=b+c;
+    if(b>c)*dif=b-c;
+    else *dif=c-b;
+    
+    *pro=b*c;
+    *quotient=b/c;
+    *rem=b%c;
+    *float_div=b/c;
+    
+    
+}
+
+
+
+int main() {
+    printf("enter the value");
+    char a;
+    int b,c;
+    scanf("%c",&a);
+    
+    while(a!='E'||a!='e')
+        switch(a!='E'||a!='e')
+            case 'A'||'a':
+            printf("enter first number");
+            scanf("%d",&b);
+            
+            printf("enter second number");
+            scanf("%d",&c);
+            
+            int sum,dif,pro,quotient,rem;
+            float float_div;
+                
+            basic_arithmetic(b,c,&sum,&dif,&pro,&quotient,&rem,&float_div);
+            
+            printf("sum = %d\n",sum);
+            printf("difference = %d\n",dif);
+            printf("product = %d\n",pro);
+            printf("quotient = %d remainder = %d",quotient,rem);
+            printf("float division = %f\n",float_div);
+           break;
+    return 0;
+}
