@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int main(){
+
+    int b[3][3],a[3][3],c[3][3],k;
+    
+    printf("enter 1st matrix array elements\n");
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            scanf("%d", &b[i][j]);
+        }
+    }
+    
+    printf("enter 2nd matrix array elements\n");
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    printf("sum of elements are\n");
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            printf("%d\t", b[i][j] + a[i][j]);
+        }
+        printf("\n");
+    }
+
+    
+        
+        printf("\n");
+    }
+    
+
+
+    return 0;
+}
